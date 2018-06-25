@@ -4,7 +4,8 @@ import { throwIfAlreadyLoaded } from './module-import-guard';
 
 @NgModule({
   providers: [
-  ]
+  ],
+  declarations: []
 })
 export class CoreModule {
   constructor( @Optional() @SkipSelf() parentModule: CoreModule) {
