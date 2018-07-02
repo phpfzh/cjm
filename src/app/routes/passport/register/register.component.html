@@ -4,11 +4,21 @@
   <nz-form-item>
     <nz-form-control>
       <nz-input-group nzSize="large" nzAddonBeforeIcon="anticon anticon-user">
-        <input nz-input formControlName="mail" placeholder="邮箱">
+        <input nz-input formControlName="email" placeholder="邮箱">
       </nz-input-group>
-      <ng-container *ngIf="mail.dirty && mail.errors">
-        <nz-form-explain *ngIf="mail.errors?.required">请输入邮箱地址！</nz-form-explain>
-        <nz-form-explain *ngIf="mail.errors?.email">邮箱地址格式错误！</nz-form-explain>
+      <ng-container *ngIf="email.dirty && email.errors">
+        <nz-form-explain *ngIf="email.errors?.required">请输入邮箱！</nz-form-explain>
+        <nz-form-explain *ngIf="email.errors?.email">邮箱格式不正确！</nz-form-explain>
+       </ng-container>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control>
+      <nz-input-group nzSize="large" nzAddonBeforeIcon="anticon anticon-user">
+        <input nz-input formControlName="username" placeholder="用户名">
+      </nz-input-group>
+      <ng-container *ngIf="username.dirty && username.errors">
+        <nz-form-explain *ngIf="username.errors?.required">请输入用户名！</nz-form-explain>
       </ng-container>
     </nz-form-control>
   </nz-form-item>
@@ -17,7 +27,7 @@
       <nz-popover [nzPlacement]="'right'" [nzTrigger]="'focus'" [(nzVisible)]="visible" nzOverlayClassName="register-password-cdk"
         [nzOverlayStyle]="{'width.px': 240}">
         <nz-input-group nzSize="large" nz-popover nzAddonBeforeIcon="anticon anticon-lock">
-          <input nz-input type="password" formControlName="password" placeholder="至少6位密码，区分大小写">
+          <input nz-input type="password" formControlName="password" placeholder="至少6位密码，区分大小写"  >
         </nz-input-group>
         <nz-form-explain *ngIf="password.dirty && password.errors">请输入密码！</nz-form-explain>
         <ng-template #nzTemplate>

@@ -6,6 +6,7 @@ import { catchError } from 'rxjs/operators';
 import { MenuService, SettingsService, TitleService, ALAIN_I18N_TOKEN } from '@delon/theme';
 import { DA_SERVICE_TOKEN, ITokenService } from '@delon/auth';
 import { ACLService } from '@delon/acl';
+import {log} from "util";
 
 /**
  * 用于应用启动时
@@ -17,13 +18,19 @@ export class StartupService {
     private menuService: MenuService,
     private settingService: SettingsService,
     private aclService: ACLService,
-    private titleService: TitleService,
+     private titleService: TitleService,
     @Inject(DA_SERVICE_TOKEN) private tokenService: ITokenService,
     private httpClient: HttpClient,
     private injector: Injector
   ) { }
 
   private viaHttp(resolve: any, reject: any) {
+    const tokenData = this.tokenService.get();
+     if(!tokenData.token){
+      this.injector.get(Router).navigateByUrl("/passport/login");
+       resolve({});
+       return ;
+    }
     zip(
       this.httpClient.get('assets/tmp/app-data.json')
     ).pipe(
@@ -107,9 +114,9 @@ export class StartupService {
     // https://github.com/angular/angular/issues/15088
     return new Promise((resolve, reject) => {
       // http
-      // this.viaHttp(resolve, reject);
+       this.viaHttp(resolve, reject);
       // mock：请勿在生产环境中这么使用，viaMock 单纯只是为了模拟一些数据使脚手架一开始能正常运行
-      this.viaMock(resolve, reject);
+      //this.viaMock(resolve, reject);
     });
   }
 }

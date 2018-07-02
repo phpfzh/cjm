@@ -18,6 +18,7 @@ registerLocaleData(localeZhHans);
 
 // @delon/form: JSON Schema form
 import { JsonSchemaModule } from '@shared/json-schema/json-schema.module';
+import {ApiService} from "@core/service/api.service";
 
 export function StartupServiceFactory(startupService: StartupService): Function {
   return () => startupService.load();
@@ -49,7 +50,8 @@ export function StartupServiceFactory(startupService: StartupService): Function 
       useFactory: StartupServiceFactory,
       deps: [StartupService],
       multi: true
-    }
+    },
+    ApiService
   ],
   bootstrap: [AppComponent]
 })
