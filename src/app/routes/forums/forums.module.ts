@@ -4,9 +4,11 @@ import { ForumsRoutingModule } from './forums-routing.module';
 import { ForumsListComponent } from './list/list.component';
 import { ForumsListEditComponent } from './list/edit/edit.component';
 import { ForumsListViewComponent } from './list/view/view.component';
+import { ForumsTableCheckboxComponent } from './table-checkbox/table-checkbox.component';
 
 const COMPONENTS = [
-  ForumsListComponent];
+  ForumsListComponent,
+  ForumsTableCheckboxComponent];
 const COMPONENTS_NOROUNT = [
   ForumsListEditComponent,
   ForumsListViewComponent];

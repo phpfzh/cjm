@@ -25,12 +25,12 @@ export class StartupService {
   ) { }
 
   private viaHttp(resolve: any, reject: any) {
-    const tokenData = this.tokenService.get();
+    /*const tokenData = this.tokenService.get();
      if(!tokenData.token){
       this.injector.get(Router).navigateByUrl("/passport/login");
        resolve({});
        return ;
-    }
+    }*/
     zip(
       this.httpClient.get('assets/tmp/app-data.json')
     ).pipe(
