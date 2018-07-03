@@ -1,0 +1,4 @@
+<nz-card>
+   <simple-table #st [data]="user" [columns]="columns"
+           (sortChange)="sortChange($event)"  (checkboxChange)="checkboxChange($event)"  showSizeChanger showQuickJumper showTotal isPageIndexReset></simple-table>
+</nz-card>
