@@ -1,0 +1,12 @@
+
+
+<nz-card>
+  <sf mode="search" [schema]="searchSchema" [formData]="params" (formSubmit)="st.reset($event)" (formReset)="st.reset(params)"></sf>
+
+
+
+
+  <simple-table #st [data]="url" [columns]="columns" [extraParams]="params" [resReName]="{list:'results'}" [total]="total"></simple-table>
+</nz-card>
+
+
