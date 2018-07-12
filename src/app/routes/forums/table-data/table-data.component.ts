@@ -8,7 +8,16 @@ import { delay } from 'rxjs/operators';
   templateUrl: './table-data.component.html',
 })
 export class ForumsTableDataComponent implements OnInit {
-      user:any[] = [];
+  optionList = [
+    { label: 'Lucy', value: 'lucy', age: 20 },
+    { label: 'Jack', value: 'jack', age: 22 }
+  ];
+
+  selectedValue = { label: 'Jack', value: 'jack', age: 22 };
+
+  compareFn = (o1: any, o2: any) => o1 && o2 ? o1.value === o2.value : o1 === o2;
+
+  user:any[] = [];
       columns:SimpleTableColumn[] = [
         {title:'编号',index:'id',type:'checkbox',selections:[
             {

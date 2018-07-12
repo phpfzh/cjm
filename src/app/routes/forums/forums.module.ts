@@ -8,13 +8,15 @@ import { ForumsTableCheckboxComponent } from './table-checkbox/table-checkbox.co
 import { ForumsTableFormComponent } from './table-form/table-form.component';
 import {ForumsTableDataComponent} from "./table-data/table-data.component";
 import { ForumsTableRadioComponent } from './table-radio/table-radio.component';
+import { ForumsG2ListComponent } from './g2-list/g2-list.component';
 
 const COMPONENTS = [
   ForumsListComponent,
   ForumsTableCheckboxComponent,
   ForumsTableDataComponent,
   ForumsTableFormComponent,
-  ForumsTableRadioComponent];
+  ForumsTableRadioComponent,
+  ForumsG2ListComponent];
 const COMPONENTS_NOROUNT = [
   ForumsListEditComponent,
   ForumsListViewComponent];

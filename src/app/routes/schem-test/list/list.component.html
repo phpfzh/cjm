@@ -1,0 +1,10 @@
+
+<div style="width:380px;">
+
+  <sf #sf [schema]="schema" (formSubmit)="submit($event)" [mode]="'edit'" [button]="null">
+        <button type="submit" nz-button [disabled]="!sf.valid">保存1</button>
+        <button (click)="sf.reset()" type="button" nz-button>重置1</button>
+  </sf>
+
+</div>
+
