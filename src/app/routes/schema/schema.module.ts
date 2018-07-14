@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '@shared/shared.module';
 import { SchemaRoutingModule } from './schema-routing.module';
 import { SchemaArrayComponent } from './array/array.component';
+import { SchemaAutocompleteComponent } from './autocomplete/autocomplete.component';
 
 const COMPONENTS = [
-  SchemaArrayComponent];
+  SchemaArrayComponent,
+  SchemaAutocompleteComponent];
 const COMPONENTS_NOROUNT = [];
 
 @NgModule({
