@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from '@shared/shared.module';
-import { SchemTestRoutingModule } from './schem-test-routing.module';
-import { SchemTestListComponent } from './list/list.component';
+import { SchemaRoutingModule } from './schema-routing.module';
+import { SchemaArrayComponent } from './array/array.component';
 
 const COMPONENTS = [
-  SchemTestListComponent];
+  SchemaArrayComponent];
 const COMPONENTS_NOROUNT = [];
 
 @NgModule({
   imports: [
     SharedModule,
-    SchemTestRoutingModule
+    SchemaRoutingModule
   ],
   declarations: [
     ...COMPONENTS,
@@ -18,4 +18,4 @@ const COMPONENTS_NOROUNT = [];
   ],
   entryComponents: COMPONENTS_NOROUNT
 })
-export class SchemTestModule { }
+export class SchemaModule { }
