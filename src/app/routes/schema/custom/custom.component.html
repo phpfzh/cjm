@@ -1,0 +1,16 @@
+<sf [schema]="schema" [ui]="ui" (formSubmit)="submit($event)">
+      <ng-template sf-template="custom" let-me let-ui="ui" let-schema="schema">
+            自定义内容wqw：
+            <input nz-input [disabled]="me.disabled"
+                  [nzSize]="ui.size" [value]="me.formProperty.value"
+                  (input)="me.setValue($event.target?.value)">
+       </ng-template>
+
+  <ng-template sf-template="custom2" let-me let-ui="ui" let-schema="schema">
+    自定义内容wqw23：
+    <input nz-input [disabled]="me.disabled"
+           [nzSize]="ui.size" [value]="me.formProperty.value"
+           (input)="me.setValue($event.target?.value)">
+  </ng-template>
+
+</sf>
