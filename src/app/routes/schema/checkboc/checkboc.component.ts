@@ -37,6 +37,17 @@ export class SchemaCheckbocComponent  {
           },
           default:['Apple']
         },
+        mulit2:{
+          type:'boolean',
+          title:'Mulit',
+          enum:['Apple','Pear','Orange'],
+          ui:{
+            widget:'checkbox',
+            checkAll:'1',
+            span:8
+          },
+          default:['Apple']
+        },
         async:{
           type:'string',
           title:'Async',
@@ -57,5 +68,10 @@ export class SchemaCheckbocComponent  {
   submit(val:any){
     console.log(val);
     this.ms.info(JSON.stringify(val));
+
+    [
+      {checkall:true,list:[{name:1},{name:2}]},
+      {checkall:false,list:[{name:1},{name:2}]},
+     ]
   }
 }

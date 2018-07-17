@@ -10,6 +10,14 @@ import { SchemaDateComponent } from './date/date.component';
 import { SchemaNumberComponent } from './number/number.component';
 import { SchemaObjectComponent } from './object/object.component';
 import { SchemaRadioComponent } from './radio/radio.component';
+import { SchemaRateComponent } from './rate/rate.component';
+import { SchemaSelectComponent } from './select/select.component';
+import { SchemaSliderComponent } from './slider/slider.component';
+import { SchemaStringComponent } from './string/string.component';
+import { SchemaTagComponent } from './tag/tag.component';
+import { SchemaTextComponent } from './text/text.component';
+import { SchemaTransferComponent } from './transfer/transfer.component';
+import { SchemaUploadComponent } from './upload/upload.component';
 
 const routes: Routes = [
 
@@ -22,7 +30,15 @@ const routes: Routes = [
   { path: 'date', component: SchemaDateComponent },
   { path: 'number', component: SchemaNumberComponent },
   { path: 'object', component: SchemaObjectComponent },
-  { path: 'radio', component: SchemaRadioComponent }
+  { path: 'radio', component: SchemaRadioComponent },
+  { path: 'rate', component: SchemaRateComponent },
+  { path: 'select', component: SchemaSelectComponent },
+  { path: 'slider', component: SchemaSliderComponent },
+  { path: 'string', component: SchemaStringComponent },
+  { path: 'tag', component: SchemaTagComponent },
+  { path: 'text', component: SchemaTextComponent },
+  { path: 'transfer', component: SchemaTransferComponent },
+  { path: 'upload', component: SchemaUploadComponent }
 
 
 ];

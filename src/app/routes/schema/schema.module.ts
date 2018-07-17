@@ -11,6 +11,14 @@ import { SchemaDateComponent } from './date/date.component';
 import { SchemaNumberComponent } from './number/number.component';
 import { SchemaObjectComponent } from './object/object.component';
 import { SchemaRadioComponent } from './radio/radio.component';
+import { SchemaRateComponent } from './rate/rate.component';
+import { SchemaSelectComponent } from './select/select.component';
+import { SchemaSliderComponent } from './slider/slider.component';
+import { SchemaStringComponent } from './string/string.component';
+import { SchemaTagComponent } from './tag/tag.component';
+import { SchemaTextComponent } from './text/text.component';
+import { SchemaTransferComponent } from './transfer/transfer.component';
+import { SchemaUploadComponent } from './upload/upload.component';
 
 const COMPONENTS = [
   SchemaArrayComponent,
@@ -22,7 +30,15 @@ const COMPONENTS = [
   SchemaDateComponent,
   SchemaNumberComponent,
   SchemaObjectComponent,
-  SchemaRadioComponent];
+  SchemaRadioComponent,
+  SchemaRateComponent,
+  SchemaSelectComponent,
+  SchemaSliderComponent,
+  SchemaStringComponent,
+  SchemaTagComponent,
+  SchemaTextComponent,
+  SchemaTransferComponent,
+  SchemaUploadComponent];
 const COMPONENTS_NOROUNT = [];
 
 @NgModule({
